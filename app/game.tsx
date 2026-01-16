@@ -5,8 +5,8 @@ import Card from "@/components/game/card";
 import CardInstruction from "@/components/game/cardInstruction";
 import { ThemedView } from "@/components/themed-view";
 import cardRoutes from "@/constants/cardRoutes";
-import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useLocalSearchParams, useRouter } from "expo-router";
+import { useEffect, useState } from "react";
 import { Pressable } from "react-native";
 import {
   SafeAreaView,
@@ -14,9 +14,23 @@ import {
 } from "react-native-safe-area-context";
 
 const Game = () => {
-  const [pal, setPal] = useState<string>("spades");
+  const params = useLocalSearchParams<{ pal?: string }>();
+
+  const [pal, setPal] = useState<string>(params.pal || "poker");
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [openInfo, setOpenInfo] = useState(false);
+  const [cardsList, setCardsList] = useState<string[]>([]);
+
+  const pals = {
+    poker: ["spades", "hearts", "clubs", "diamonds"],
+    espanyola: ["bastos", "copes", "espases", "oros"],
+  };
+
+  useEffect(() => {
+    const options = pals[pal];
+    const random = options[Math.floor(Math.random() * options.length)];
+    setCardsList(cardRoutes[pal][random]);
+  }, [pal]);
 
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -37,19 +51,19 @@ const Game = () => {
         <InfoIcon size={50} color="gray" />
       </Pressable>
       <ThemedView style={styles.container}>
-        {cardRoutes.poker[pal].map((cardSrc, index) => (
+        {cardsList.map((cardSrc, index) => (
           <Pressable key={index} onPress={() => setSelectedCard(index)}>
             <Card imageSrc={cardSrc} key={index} />
           </Pressable>
         ))}
       </ThemedView>
-      <CardInstruction
-        card={
-          selectedCard !== null ? cardRoutes.poker[pal][selectedCard] : null
-        }
-        visible={selectedCard !== null}
-        onClose={() => setSelectedCard(null)}
-      />
+      {selectedCard !== null && (
+        <CardInstruction
+          card={selectedCard}
+          visible={selectedCard !== null}
+          onClose={() => setSelectedCard(null)}
+        />
+      )}
       {openInfo && (
         <Info visible={openInfo} onClose={() => setOpenInfo(false)} />
       )}

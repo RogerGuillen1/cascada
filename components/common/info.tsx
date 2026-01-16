@@ -32,8 +32,9 @@ const Info = ({ visible, onClose }) => {
 
         <ThemedText style={styles.text}>
           Cada jugador, en el seu torn, ha d'agafar una carta i mostrar-la,
-          mireu les instruccions de la carta a l'app i posar la carta sobre
-          l'ampolla del mig, llavors la següent persona segueix amb el joc
+          mireu les instruccions de la carta a l'app(el pal no importa, només el
+          número) i posar la carta sobre l'ampolla del mig, llavors la següent
+          persona segueix amb el joc
         </ThemedText>
 
         <ThemedText style={styles.text}>
