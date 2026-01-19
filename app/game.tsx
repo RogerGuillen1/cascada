@@ -34,12 +34,12 @@ const Game = () => {
 
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const topSpace = insets.top + 30;
+  const topSpace = insets.top + 20;
 
   return (
     <SafeAreaView style={{ flex: 1, position: "relative" }}>
       <Pressable
-        style={[styles.backButton, { top: topSpace }]}
+        style={[styles.backButton, { top: topSpace + 5 }]}
         onPress={() => router.push("/")}
       >
         <BackArrow size={45} color="gray" />
@@ -59,6 +59,7 @@ const Game = () => {
       </ThemedView>
       {selectedCard !== null && (
         <CardInstruction
+          pal={pal}
           card={selectedCard}
           visible={selectedCard !== null}
           onClose={() => setSelectedCard(null)}

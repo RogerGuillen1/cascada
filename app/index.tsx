@@ -1,12 +1,13 @@
 import InfoIcon from "@/assets/images/InfoIcon";
 import TranslateIcon from "@/assets/images/TranslateIcon";
 import Info from "@/components/common/info";
-import Language from "@/components/common/language";
+import Language from "@/components/index/language";
 import StartGame from "@/components/index/startGame";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { useRouter } from "expo-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Image, Pressable } from "react-native";
 import {
   SafeAreaView,
@@ -14,6 +15,8 @@ import {
 } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
+  const { t } = useTranslation();
+
   const [openInfo, setOpenInfo] = useState(false);
   const [openLanguage, setOpenLanguage] = useState(false);
   const [openStartGame, setOpenStartGame] = useState(false);
@@ -39,7 +42,8 @@ export default function HomeScreen() {
       </Pressable>
 
       <ThemedView style={styles.container}>
-        <ThemedText style={styles.title}>La cascada</ThemedText>
+        <ThemedText style={styles.title}>{t("home.title")}</ThemedText>
+
         <Image
           source={require("../assets/images/circle.png")}
           style={{
@@ -49,10 +53,12 @@ export default function HomeScreen() {
             marginVertical: 10,
           }}
         />
+
         <Pressable onPress={() => setOpenStartGame(true)} style={styles.button}>
-          <ThemedText>Començar</ThemedText>
+          <ThemedText>{t("home.start")}</ThemedText>
         </Pressable>
       </ThemedView>
+
       {openInfo && (
         <Info visible={openInfo} onClose={() => setOpenInfo(false)} />
       )}

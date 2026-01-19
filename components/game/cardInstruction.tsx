@@ -2,30 +2,43 @@ import gameInstructions from "@/constants/gameInstructions";
 import Modal from "../common/modal";
 import { ThemedText } from "../themed-text";
 import { ThemedView } from "../themed-view";
+import { useTranslation } from "react-i18next";
 
 const CardInstruction = ({
+  pal,
   card,
   visible,
   onClose,
 }: {
-  card: string;
+  pal: string;
+  card: number;
   visible: boolean;
   onClose: () => void;
 }) => {
-  console.log(card);
+  const { t } = useTranslation();
+
+  const instructions =
+    pal !== "poker"
+      ? gameInstructions.filter((_, index) => index !== 2)
+      : gameInstructions;
+
+  const cardKey = instructions[card].key;
+
   return (
     <Modal visible={visible} onClose={onClose}>
       <ThemedView style={styles.box}>
         <ThemedText style={styles.title}>
-          {gameInstructions[card].name}
+          {t(`cards.${cardKey}.name`)}
         </ThemedText>
+
         <ThemedText style={styles.text}>
-          {gameInstructions[card].description}
+          {t(`cards.${cardKey}.description`)}
         </ThemedText>
       </ThemedView>
     </Modal>
   );
 };
+
 export default CardInstruction;
 
 const styles = {

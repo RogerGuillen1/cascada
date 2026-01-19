@@ -1,20 +1,20 @@
+import { useTranslation } from "react-i18next";
 import { Image, Pressable, ScrollView } from "react-native";
 import { ThemedText } from "../themed-text";
 import Modal from "./modal";
 
 const Info = ({ visible, onClose }) => {
+  const { t } = useTranslation();
+
   return (
     <Modal visible={visible} onClose={onClose}>
       <ScrollView
         contentContainerStyle={{ paddingBottom: 20, gap: 10 }}
         showsVerticalScrollIndicator={false}
       >
-        <ThemedText style={styles.title}>Com es juga?</ThemedText>
+        <ThemedText style={styles.title}>{t("info.title")}</ThemedText>
 
-        <ThemedText style={styles.text}>
-          Posiciona una ampolla al mig i les cartes de la baralla al voltant
-          formant un cercle com a la foto
-        </ThemedText>
+        <ThemedText style={styles.text}>{t("info.step1")}</ThemedText>
 
         <Image
           source={require("../../assets/images/circle.png")}
@@ -26,25 +26,15 @@ const Info = ({ visible, onClose }) => {
           }}
         />
 
-        <ThemedText style={styles.text}>
-          A continuació decidiu qui comença i en quin sentit seguiu
-        </ThemedText>
+        <ThemedText style={styles.text}>{t("info.step2")}</ThemedText>
 
-        <ThemedText style={styles.text}>
-          Cada jugador, en el seu torn, ha d'agafar una carta i mostrar-la,
-          mireu les instruccions de la carta a l'app(el pal no importa, només el
-          número) i posar la carta sobre l'ampolla del mig, llavors la següent
-          persona segueix amb el joc
-        </ThemedText>
+        <ThemedText style={styles.text}>{t("info.step3")}</ThemedText>
 
-        <ThemedText style={styles.text}>
-          El joc acaba quan hi ha alguna obertura en el cercle de cartes o el
-          piló de sobre l'ampolla cau, en aquest cas l'últim jugador que hagi
-          tocat les cartes ha de fer un sant hilari
-        </ThemedText>
+        <ThemedText style={styles.text}>{t("info.step4")}</ThemedText>
+
         <Pressable onPress={onClose} style={styles.button}>
           <ThemedText style={[styles.text, { fontWeight: "bold" }]}>
-            Tancar
+            {t("info.close")}
           </ThemedText>
         </Pressable>
       </ScrollView>

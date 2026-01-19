@@ -1,7 +1,18 @@
 import { Image, Pressable, View } from "react-native";
 import { ThemedText } from "../themed-text";
 
-const RadioOption = ({ label, selected, onPress }) => {
+const RadioOption = ({ label, value, selected, onPress }) => {
+  const getImageSource = () => {
+    switch (value) {
+      case "poker":
+        return require("../../assets/images/PNG-cards-1.3/ace_of_clubs.png");
+      case "spanish":
+        return require("../../assets/images/cartes_baralla_espanyola/oros_01.png");
+      default:
+        return null;
+    }
+  };
+
   return (
     <Pressable
       onPress={onPress}
@@ -12,14 +23,12 @@ const RadioOption = ({ label, selected, onPress }) => {
       }}
     >
       <Image
-        source={
-          label === "Baralla de Poker"
-            ? require("../../assets/images/PNG-cards-1.3/ace_of_clubs.png")
-            : require("../../assets/images/cartes_baralla_espanyola/oros_01.png")
-        }
+        source={getImageSource()}
         style={{ width: 40, height: 60, resizeMode: "contain" }}
       />
+
       <ThemedText style={{ fontSize: 16 }}>{label}</ThemedText>
+
       <View
         style={{
           width: 24,
@@ -31,7 +40,6 @@ const RadioOption = ({ label, selected, onPress }) => {
           justifyContent: "center",
         }}
       >
-        {/* Inner filled circle */}
         {selected && (
           <View
             style={{

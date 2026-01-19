@@ -1,0 +1,75 @@
+{
+  "language": "Llengua",
+  "home": {
+    "title": "La cascada",
+    "start": "Començar"
+  },
+  "info": {
+    "title": "Com es juga?",
+    "step1": "Posiciona una ampolla al mig i les cartes de la baralla al voltant formant un cercle com a la foto",
+    "step2": "A continuació decidiu qui comença i en quin sentit seguiu",
+    "step3": "Cada jugador, en el seu torn, ha d'agafar una carta i mostrar-la, mireu les instruccions de la carta a l'app (el pal no importa, només el número) i posar la carta sobre l'ampolla del mig, llavors la següent persona segueix amb el joc",
+    "step4": "El joc acaba quan hi ha alguna obertura en el cercle de cartes o el piló de sobre l'ampolla cau, en aquest cas l'últim jugador que hagi tocat les cartes ha de fer un sant hilari",
+    "close": "Tancar"
+  },
+  "startGame": {
+    "title": "Selecciona el model de cartes",
+    "poker": "Baralla de Poker",
+    "spanish": "Baralla espanyola",
+    "start": "Començar"
+  },
+  "cards": {
+    "waterfall": {
+      "name": "Cascada",
+      "description": "Qui agafa la carta comença a beure, tots beuen amb aquesta persona fins que decideix parar"
+    },
+    "choose_drinker": {
+      "name": "Tria qui beu",
+      "description": "Escull a un jugador per a que begui una quantitat determinada de glops"
+    },
+    "drink_you": {
+      "name": "Beu tu",
+      "description": "Et toca beure a tu!"
+    },
+    "girls_drink": {
+      "name": "Noies beuen",
+      "description": "Les noies beuen"
+    },
+    "thumb_master": {
+      "name": "Amo del polze",
+      "description": "Ets l'amo del polze, quan vulguis posa el teu polze a la taula, i tothom també ho haurà de fer. L'últim en posar-lo beu"
+    },
+    "boys_drink": {
+      "name": "Nois beuen",
+      "description": "Els nois beuen"
+    },
+    "finger_sky": {
+      "name": "Dit al cel",
+      "description": "Ets l'amo del dit al cel, quan vulguis apunta al cel i digues 'piu', i tothom també ho haurà de fer. L'últim en fer-ho beu"
+    },
+    "slave": {
+      "name": "L'esclau",
+      "description": "Escull a algú que serà el teu esclau, quan beguis tu, ell també haurà de beure"
+    },
+    "rhyme": {
+      "name": "La rima",
+      "description": "Tria una paraula i tothom haurà de dir una paraula que rimi amb aquesta per torns en el sentit del joc. Qui no pugui dir-ne cap beu"
+    },
+    "category": {
+      "name": "La categoria",
+      "description": "Tria una categoria i tothom haurà de dir un element d'aquesta categoria per torns en el sentit del joc. Qui no pugui dir-ne cap beu"
+    },
+    "all_drink": {
+      "name": "Tots beuen",
+      "description": "Tots a beure! Tria quants glops"
+    },
+    "ghost": {
+      "name": "El fantasma",
+      "description": "Tothom t'ha d'ignorar fins que algú altre el fantasma. Si algú et parla abans haurà de beure"
+    },
+    "new_rule": {
+      "name": "Nova norma",
+      "description": "Posa una norma nova al joc que tothom haurà de seguir"
+    }
+  }
+}

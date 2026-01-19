@@ -1,0 +1,75 @@
+{
+  "language": "Idioma",
+  "home": {
+    "title": "La cascada",
+    "start": "Empezar"
+  },
+  "info": {
+    "title": "¿Cómo se juega?",
+    "step1": "Coloca una botella en el centro y las cartas de la baraja alrededor formando un círculo como en la imagen",
+    "step2": "A continuación, decidid quién empieza y en qué sentido seguís",
+    "step3": "Cada jugador, en su turno, debe coger una carta y mostrarla, mira las instrucciones de la carta en la app (el palo no importa, solo el número) y coloca la carta sobre la botella del centro. Luego la siguiente persona continúa el juego",
+    "step4": "El juego termina cuando hay alguna apertura en el círculo de cartas o la pila sobre la botella cae. En ese caso, el último jugador que haya tocado las cartas debe hacer un castigo",
+    "close": "Cerrar"
+  },
+  "startGame": {
+    "title": "Selecciona el tipo de cartas",
+    "poker": "Baraja de póker",
+    "spanish": "Baraja española",
+    "start": "Empezar"
+  },
+  "cards": {
+    "waterfall": {
+      "name": "Cascada",
+      "description": "Quien toma la carta empieza a beber, todos beben con esa persona hasta que decida parar"
+    },
+    "choose_drinker": {
+      "name": "Elige quién bebe",
+      "description": "Escoge a un jugador para que beba una cantidad determinada de tragos"
+    },
+    "drink_you": {
+      "name": "Bebe tú",
+      "description": "¡Te toca beber!"
+    },
+    "girls_drink": {
+      "name": "Beben las chicas",
+      "description": "Las chicas beben"
+    },
+    "thumb_master": {
+      "name": "Amo del pulgar",
+      "description": "Eres el amo del pulgar, cuando quieras pon tu pulgar en la mesa y todos deberán hacerlo también. El último en ponerlo bebe"
+    },
+    "boys_drink": {
+      "name": "Beben los chicos",
+      "description": "Los chicos beben"
+    },
+    "finger_sky": {
+      "name": "Dedo al cielo",
+      "description": "Eres el amo del dedo al cielo, cuando quieras apunta al cielo y di 'piu', y todos deberán hacerlo también. El último en hacerlo bebe"
+    },
+    "slave": {
+      "name": "El esclavo",
+      "description": "Elige a alguien que será tu esclavo, cuando bebas tú, él también deberá beber"
+    },
+    "rhyme": {
+      "name": "La rima",
+      "description": "Elige una palabra y todos deberán decir una palabra que rime con ella por turnos en el sentido del juego. Quien no pueda decir ninguna bebe"
+    },
+    "category": {
+      "name": "La categoría",
+      "description": "Elige una categoría y todos deberán decir un elemento de esa categoría por turnos en el sentido del juego. Quien no pueda decir ninguno bebe"
+    },
+    "all_drink": {
+      "name": "Todos beben",
+      "description": "¡Todos a beber! Elige cuántos tragos"
+    },
+    "ghost": {
+      "name": "El fantasma",
+      "description": "Todos deben ignorarte hasta que alguien más sea el fantasma. Si alguien te habla antes, deberá beber"
+    },
+    "new_rule": {
+      "name": "Nueva norma",
+      "description": "Crea una nueva norma en el juego que todos deberán seguir"
+    }
+  }
+}

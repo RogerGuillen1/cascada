@@ -1,0 +1,75 @@
+{
+  "language": "Language",
+  "home": {
+    "title": "The Waterfall",
+    "start": "Start"
+  },
+  "info": {
+    "title": "How to Play",
+    "step1": "Place a bottle in the center and arrange the deck of cards around it in a circle as shown in the image.",
+    "step2": "Decide who starts and which direction the game will go.",
+    "step3": "On your turn, draw a card and show it. Check the card instructions in the app (the suit doesn’t matter, only the number) and place the card on top of the bottle in the center. Then the next player continues.",
+    "step4": "The game ends when there is a gap in the circle of cards or the stack on top of the bottle falls. In that case, the last player who touched the cards must take a forfeit.",
+    "close": "Close"
+  },
+  "startGame": {
+    "title": "Choose Your Deck",
+    "poker": "Poker Deck",
+    "spanish": "Spanish Deck",
+    "start": "Start"
+  },
+  "cards": {
+    "waterfall": {
+      "name": "Waterfall",
+      "description": "The player who drew the card starts drinking. Everyone drinks with them until they decide to stop."
+    },
+    "choose_drinker": {
+      "name": "Pick a Drinker",
+      "description": "Choose a player who must take a set number of sips."
+    },
+    "drink_you": {
+      "name": "Drink!",
+      "description": "It’s your turn to drink!"
+    },
+    "girls_drink": {
+      "name": "Girls Drink",
+      "description": "All the girls take a drink."
+    },
+    "thumb_master": {
+      "name": "Thumb Master",
+      "description": "You are the Thumb Master. At any time, place your thumb on the table and everyone must follow. The last person to do so drinks."
+    },
+    "boys_drink": {
+      "name": "Boys Drink",
+      "description": "All the boys take a drink."
+    },
+    "finger_sky": {
+      "name": "Sky Point",
+      "description": "You are the Sky Point Master. At any time, point to the sky and say 'piu'—everyone must copy you. The last person to do it drinks."
+    },
+    "slave": {
+      "name": "The Slave",
+      "description": "Choose someone to be your slave. Whenever you drink, they must drink too."
+    },
+    "rhyme": {
+      "name": "Rhyme Time",
+      "description": "Pick a word. Going in turn, everyone must say a word that rhymes with it. Anyone who can’t think of one drinks."
+    },
+    "category": {
+      "name": "Category",
+      "description": "Choose a category. Going in turn, everyone must name something from that category. Anyone who can’t think of one drinks."
+    },
+    "all_drink": {
+      "name": "Everyone Drinks",
+      "description": "Everyone drinks! Choose how many sips."
+    },
+    "ghost": {
+      "name": "The Ghost",
+      "description": "Everyone must ignore you until someone else becomes the Ghost. If anyone talks to you before that, they drink."
+    },
+    "new_rule": {
+      "name": "New Rule",
+      "description": "Create a new rule that everyone must follow for the rest of the game."
+    }
+  }
+}

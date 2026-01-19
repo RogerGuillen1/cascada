@@ -5,8 +5,10 @@ import Modal from "../common/modal";
 import { ThemedText } from "../themed-text";
 import { ThemedView } from "../themed-view";
 import RadioOption from "./radioOption";
+import { useTranslation } from "react-i18next";
 
 const StartGame = ({ visible, onClose }) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const [pal, setPal] = useState<string>("poker");
@@ -25,20 +27,25 @@ const StartGame = ({ visible, onClose }) => {
     <Modal visible={visible} onClose={onClose}>
       <ThemedView style={{ alignItems: "center", gap: 30 }}>
         <ThemedText style={{ fontSize: 18, fontWeight: "bold" }}>
-          Selecciona el model de cartes
+          {t("startGame.title")}
         </ThemedText>
+
         <RadioOption
-          label="Baralla de Poker"
+          value="poker"
+          label={t("startGame.poker")}
           selected={pal === "poker"}
           onPress={() => setPal("poker")}
         />
+
         <RadioOption
-          label="Baralla espanyola"
+          value="spanish"
+          label={t("startGame.spanish")}
           selected={pal === "espanyola"}
           onPress={() => setPal("espanyola")}
         />
+
         <Pressable onPress={goToGame} style={styles.button}>
-          <ThemedText>Començar</ThemedText>
+          <ThemedText>{t("startGame.start")}</ThemedText>
         </Pressable>
       </ThemedView>
     </Modal>
